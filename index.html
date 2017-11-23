@@ -1,1 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <title>
+    $200 in 2002 &rarr; 2017 | Inflation Calculator
+    </title>     
+  </head>
+  
+<body>
+  <div class="navbar navbar-default navbar-static-top">
+    <div class="container">
+      <span class="navbar-brand">
 
+     ★ 2002 dollars in 2017
+
+      </span>
+    </div>
+  </div>
+
+  <div class="main-info">
+    <div>
+      <h1 style="line-height: 1.5">
+
+          <span class="highlighted-amount">$200</span>
+          in 2002 &rarr;
+          <span class="highlighted-amount">$272.14</span>
+          in 2017
+
+      </h1>
+    </div>
+  </div>
+
+  <div class="row">
+  <div class="col-md-4">
+  </div>
+      <div class="col-md-4">
+        <div class="well">
+          <div>
+            <h2 style="margin-bottom: 24px">
+
+    Inflation Calculator
+
+
+            </h2>
+            <form id="form-calculate" class="form-horizontal">
+              <div class="form-group">
+                <label class="col-sm-4 col-xs-offset-1 col-sm-offset-0 control-label">Amount</label>
+                <div class="input-group col-sm-6 col-xs-offset-1 col-sm-offset-0">
+                  <span class="input-group-addon">
+                    $
+                  </span>
+                  <input id="amount" class="form-control" value="200" type="number" step="any" min="0"><wbr/>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-4 col-xs-offset-1 col-sm-offset-0 control-label">Start year</label>
+                <div class="input-group col-sm-6 col-xs-offset-1 col-sm-offset-0">
+                  <input id="y1" class="form-control" value="2002" title="2002" type="number">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-4 col-xs-offset-1 col-sm-offset-0 control-label">End year</label>
+                <div class="input-group col-sm-6 col-xs-offset-1 col-sm-offset-0">
+                  <input id="y2" class="form-control" value="2017" title="2017" type="number">
+                </div>
+              </div>
+
+
+
+              <div class="form-group">
+                <div class="input-group col-sm-offset-4 col-xs-offset-1">
+                  <button id="btn-calculate" class="btn btn-success" type="submit" title="Calculate" disabled>
+                    Calculate
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+ 
+      <footer class="pull-left col-md-offset-4">
+        &copy; 2017 Andrew Salber  <a href="salber.andrew@gmail.com">Contact</a>
+      </footer>
+    </div> <!-- end container -->
+
+<script>
+  window.addEventListener('error', function(e) {
+    var errlog = {
+      msg: e.message,
+      location: e.filename + ': ' + e.lineno
+    };
+    analytics.track('js error', errlog);
+  });
+</script>
+
+    
+<script src="/assets/js/bundle/bundle-20170920.js" async></script>
+<script>
+  function waitForLoad(callback) {
+    var ready = typeof window.cash !== 'undefined' &&
+                typeof window.InflationController !== 'undefined';
+    if (ready) {
+      callback();
+    } else {
+      setTimeout(waitForLoad.bind(this, callback), 50);
+    }
+  }
+
+  waitForLoad(function() {
+    var controller = new InflationController({
+      currency_code: 'USD',
+
+      current_year: 2017,
+      is_future_prediction: false,
+
+      year: 2002,
+      comparison_year: 2017,
+      amount: 200,
+      future_pct: NaN
+    });
+  });
+</script>
+
+
+<script type="text/javascript">
+// Create a queue to push events, and stub all methods
+window.analytics || (window.analytics = {});
+window.analytics_queue || (window.analytics_queue = []);
+(function() {
+  var methods = ['identify', 'track', 'trackLink', 'trackForm', 'trackClick', 'trackSubmit', 'page', 'pageview', 'ab', 'alias', 'ready', 'group', 'on', 'once', 'off'];
+
+  var factory = function(method) {
+    return function () {
+      var args = Array.prototype.slice.call(arguments);
+      args.unshift(method);
+      analytics_queue.push(args);
+      return window.analytics;
+    };
+  };
+
+  for (var i = 0; i < methods.length; i++) {
+    var method = methods[i];
+    window.analytics[method] = factory(method);
+  }
+})();
+
+
+  // Load analytics.js after everything else
+  analytics.load = function(callback) {
+    var script = document.createElement('script');
+    script.async = true;
+    script.type = 'text/javascript';
+    script.src = '/assets/js/anal.min.js';
+    script.addEventListener('load', function (e) {
+      if(typeof callback == 'function') {
+        callback(e);
+      }
+    }, false);
+    var firstScript = document.getElementsByTagName('script')[0];
+    firstScript.parentNode.insertBefore(script, firstScript);
+  };
+
+  analytics.load(function() {
+    analytics.initialize({
+      'Google Analytics': {
+         trackingId: 'UA-54607101-1',
+         siteSpeedSampleRate: 100
+       },
+       'Mixpanel': {
+         token: '6adf9366b227975969048025fd8fcd24'
+       }
+    });
+
+    // Loop through the interim analytics queue and reapply the calls to their
+    // proper analytics.js method.
+    // https://stackoverflow.com/questions/14859058/why-does-the-segment-io-loader-script-push-method-names-args-onto-a-queue-which
+    while (window.analytics_queue.length > 0) {
+      var item = window.analytics_queue.shift();
+      var method = item.shift();
+      if (analytics[method]) analytics[method].apply(analytics, item);
+    }
+  });
+
+  // Track the page view
+  analytics.page();
+
+  </script>
+
+    
+
+    
+  
+    <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+    "@type": "ListItem",
+    "position": 1,
+    "item": {
+      "@id": "http://www.in2013dollars.com/",
+      "name": "Inflation Calculator"
+    }
+  },{
+    "@type": "ListItem",
+    "position": 2,
+    "item": {
+      "@id": "http://www.in2013dollars.com/1990-dollars-in-2017",
+      "name": "U.S. dollars"
+    }
+  },{
+    "@type": "ListItem",
+    "position": 3,
+    "item": {
+      "@id": "http://www.in2013dollars.com/inflation-rate-in-2002",
+      "name": "2002"
+    }
+  },{
+    "@type": "ListItem",
+    "position": 4,
+    "item": {
+      "@id": "http://www.in2013dollars.com/2002-dollars-in-2017",
+      "name": "2017 value"
+    }
+  }]
+}
+</script>
+
+  
+
+
+<script>
+if (typeof ga !== 'undefined') ga('send', 'event', 'experiment', 'show_mobile_largead', 'enabled', { nonInteraction: true });
+</script>
+
+
+<script>
+if (typeof ga !== 'undefined') ga('send', 'event', 'experiment', 'show_desktop_nativead', 'disabled', { nonInteraction: true });
+</script>
+
+
+
+
+
+<script type="text/javascript">
+var w = window,
+d = document,
+e = d.documentElement,
+g = d.getElementsByTagName('body')[0],
+x = w.innerWidth || e.clientWidth || g.clientWidth,
+y = w.innerHeight|| e.clientHeight|| g.clientHeight;
+if (x > 960 && y > 600) {
+window.doorbellOptions = {
+    appKey: 'XlCAnPpWeAy78UUjJJcwHKALPQCTZEkg2TGbglPnnEZM9pNg0yAOnDHTyD53CXxb',
+    strings: {
+      'feedback-button-text': 'Feedback?',
+      'feedback-textarea-placeholder': 'Let us know how we can improve...'
+    }
+};
+(function(w, d, t) {
+    var hasLoaded = false;
+    function l() { if (hasLoaded) { return; } hasLoaded = true; window.doorbellOptions.windowLoaded = true; var g = d.createElement(t);g.id = 'doorbellScript';g.type = 'text/javascript';g.async = true;g.src = 'https://embed.doorbell.io/button/6921?t='+(new Date().getTime());(d.getElementsByTagName('head')[0]||d.getElementsByTagName('body')[0]).appendChild(g); }
+    if (w.attachEvent) { w.attachEvent('onload', l); } else if (w.addEventListener) { w.addEventListener('load', l, false); } else { l(); }
+    if (d.readyState == 'complete') { l(); }
+}(window, document, 'script'));
+}
+</script>
+
+</body>
+</html>
